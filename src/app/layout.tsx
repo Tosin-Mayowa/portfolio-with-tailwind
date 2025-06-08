@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/Components/Header/Header";
+import { ThemeProvider } from "./_lib/Context";
 
 export const metadata: Metadata = {
   title: "Mayowa Portfolio",
@@ -17,8 +18,11 @@ export default function RootLayout({
       <body
         
       >
-       <Header/>
+        <ThemeProvider>
+         <Header/>
         {children}
+        </ThemeProvider>
+       
       </body>
     </html>
   );
