@@ -3,7 +3,7 @@
 import { IoMdMenu } from "react-icons/io";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import Link from "next/link";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "@/app/_lib/Context";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
@@ -18,16 +18,30 @@ const navLinks = [
 
 export const Header: React.FC = () => {
   const [isClick, setIsClick] = useState<boolean>(false);
-  const [hoveredLink, setHoveredLink] = useState<string | null>(null);
+  const [hoveredLink, setHoveredLink] = useState<string | null>("home");
   const mode = useContext(ThemeContext);
   const pathname = usePathname();
+  console.log(hoveredLink);
+  
+useEffect(()=>{
+  hoveredLink===null?setHoveredLink("home"):"";
+},[hoveredLink])
 
+
+  useEffect(() => {
+    const handleScroll = () => {
+      mode?.handleScroll(window.scrollY > 50); // adjust scroll value as needed
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
     <>
       <header
         className={`fixed top-0 left-0 z-100 w-screen transition-all duration-500 ease-in-out overflow-hidden ${
           isClick ? "h-screen border-none bg-[#f5f5f5]" : "h-[80px]"
-        }`}
+        } ${mode?.scrolled?"bg-[#f5f5f5]":"bg-white"}` }
       >
         <div className="p-4 text-white font-bold flex justify-between">
           <h1
@@ -82,14 +96,17 @@ export const Header: React.FC = () => {
                     onMouseEnter={() =>
                       isClick && setHoveredLink(navLink.name.toLowerCase())
                     }
+                    className="cursor-pointer"
                   >
                     <Link
+
                       href={navLink.href}
                       className={`transition-all duration-500 ease-in-out ${
                         mode?.light ? "text-[#1f1e1e]" : "text-white"
                       } ${
                         isActive ? "text-primary" : "text-[#666362]"
                       } text-[16px] font-bold lg:text-[25px] xl:text-[60px] hover:text-primary`}
+                    onClick={() => setIsClick(!isClick)}
                     >
                       {navLink.name}
                     </Link>
@@ -102,7 +119,7 @@ export const Header: React.FC = () => {
           {/* Hover Panel */}
           {isClick && hoveredLink && (
             <div className="hidden lg:flex  lg:absolute lg:left-0 lg:top-full lg:w-full lg:z-40">
-              {(!hoveredLink || hoveredLink === "home") && (
+              {(hoveredLink===null || hoveredLink === "home") && (
                 <div className="flex p-4 justify-between items-center xl:w-full xl:h-[800px] border border-solid border-[#666362] xl:bg-[#f5f5f5]">
                   <div className="w-[50%] h-full lg:pt-[50px] xl:pt-[80px] ">
                     <h1 className="text-[40px] text-[#1F1E1E] ">
@@ -218,7 +235,7 @@ export const Header: React.FC = () => {
                               >
                                   <h2 className="text-white text-center text-[18px]">{project.title}</h2>
                                   <p className="text-white text-[12px] mt-4 text-center font-light w-[70%] flex justify-center flex-wrap">{project.stack}</p>
-                                  <Link href={`/projects/${project.id}`} className="transition-all duration-500 ease-in-out w-[60%] text-center opacity-0 group-hover:opacity-100 h-[30px] flex justify-center items-center mt-3  rounded-[8px] self-center bg-primary ">View Details</Link>
+                                  <Link href={`/projects/${project.id}`} onClick={() => setIsClick(!isClick)} className="transition-all duration-500 ease-in-out w-[60%] text-center opacity-0 group-hover:opacity-100 h-[30px] flex justify-center items-center mt-3  rounded-[8px] self-center bg-primary cursor-pointer ">View Details</Link>
                               </div>)
                           }
                         
