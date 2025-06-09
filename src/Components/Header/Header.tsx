@@ -25,7 +25,7 @@ export const Header: React.FC = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 z-50 w-screen transition-all duration-500 ease-in-out overflow-hidden ${
+        className={`fixed top-0 left-0 z-100 w-screen transition-all duration-500 ease-in-out overflow-hidden ${
           isClick ? "h-screen border-none bg-[#f5f5f5]" : "h-[80px]"
         }`}
       >
