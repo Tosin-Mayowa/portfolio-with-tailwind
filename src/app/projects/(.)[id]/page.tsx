@@ -1,7 +1,7 @@
 
 
 import { ProjectIntercept } from "@/Components/ProjectIntercept/ProjectIntercept";
-import { JSX } from "react";
+
 
 interface IParams {
   params: Promise<{ id: string }>;
