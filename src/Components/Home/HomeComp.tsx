@@ -41,7 +41,7 @@ export const HomeComp = () => {
               edtech, logistics, and enterprise environments.
             </p>
             <button
-              className={`w-[50%] h-[40px] transition-colors duration-300 ease-in-out font-bold text-[14px] mt-[20px] self-center bg-primary rounded-[10px] border-none  ${
+              className={`w-[50%] h-[40px] transition-colors duration-300 ease-in-out font-bold text-[14px] mt-[20px] self-center bg-primary rounded-[10px] border-none text-white ${
                 mode?.light ? "hover:bg-[#1f9692]" : "hover:bg-secondary"
               } ${mode?.light ? "hover:text-white" : "hover:text-black"}
          md:mt-[15px] md:text-[18px] xmd:mt-[25px] lg:mt-[30px] lg:h-[60px] ${
