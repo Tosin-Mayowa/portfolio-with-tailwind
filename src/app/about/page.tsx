@@ -31,7 +31,7 @@ export default function About() {
               </span>
             </p>
             <p className="text-[#1f1e1e] text-center xl:text-left text-[13px] md:text-[16px] lg:text-[18px] font-light mt-3">
-              I’ve led engineering teams, collaborated cross-functionally with
+              I have led engineering teams, collaborated cross-functionally with
               designers and backend developers, and worked directly with
               stakeholders to deliver robust features that are currently live in
               production—empowering decision-makers in finance, education, and

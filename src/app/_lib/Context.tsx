@@ -1,5 +1,5 @@
 "use client"
-import {Children, createContext, useState} from 'react'
+import {createContext, useState} from 'react'
 
 
 export const ThemeContext=createContext<{light:boolean, scrolled:boolean,updateMode:()=>void, handleScroll:(val:boolean)=>void}| undefined>(undefined);
