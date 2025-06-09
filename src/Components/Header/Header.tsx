@@ -7,7 +7,7 @@ import { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "@/app/_lib/Context";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import Tosin from "../../../public/Images/mayowa.jpg";
+
 import { projects } from "@/app/projects/page";
 const navLinks = [
   { id: 1, name: "Home", href: "/" },
@@ -239,7 +239,7 @@ export const Header: React.FC = () => {
                       </p>
                       <Link
                         href={`/projects/${project.id}`}
-                        onClick={(e) => {
+                        onClick={() => {
                           // e.preventDefault();
                           setIsClick(prev=>!prev);
                           

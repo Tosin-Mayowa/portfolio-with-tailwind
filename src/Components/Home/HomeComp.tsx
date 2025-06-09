@@ -1,6 +1,6 @@
 "use client";
 import { ThemeContext } from "@/app/_lib/Context";
-import { useContext, useState } from "react";
+import { useContext} from "react";
 
 export const HomeComp = () => {
   const mode = useContext(ThemeContext);
