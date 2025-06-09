@@ -1,9 +1,10 @@
 "use client";
 import { ThemeContext } from "@/app/_lib/Context";
 import { useContext} from "react";
-
+import {useRouter} from "next/navigation";
 export const HomeComp = () => {
   const mode = useContext(ThemeContext);
+  const router=useRouter();
   return (
     <>
       <section className="w-screen h-screen">
@@ -41,12 +42,13 @@ export const HomeComp = () => {
               edtech, logistics, and enterprise environments.
             </p>
             <button
-              className={`w-[50%] h-[40px] transition-colors duration-300 ease-in-out font-bold text-[14px] mt-[20px] self-center bg-primary rounded-[10px] border-none text-white ${
+              className={`cursor-pointer w-[50%] h-[40px] transition-colors duration-300 ease-in-out font-bold text-[14px] mt-[20px] self-center bg-primary rounded-[10px] border-none text-white ${
                 mode?.light ? "hover:bg-[#1f9692]" : "hover:bg-secondary"
               } ${mode?.light ? "hover:text-white" : "hover:text-black"}
          md:mt-[15px] md:text-[18px] xmd:mt-[25px] lg:mt-[30px] lg:h-[60px] ${
            mode?.light ? "text-[#1f1e1e]" : "text-white"
          }`}
+         onClick={()=>router.push("/projects")}
             >
               My projects
             </button>

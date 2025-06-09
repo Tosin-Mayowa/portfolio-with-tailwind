@@ -24,7 +24,7 @@ export const Header: React.FC = () => {
   console.log(hoveredLink);
 
   useEffect(() => {
-    hoveredLink === null ? setHoveredLink("home") : "";
+    hoveredLink === null ? setHoveredLink("home") : null;
   }, [hoveredLink]);
 
   useEffect(() => {
