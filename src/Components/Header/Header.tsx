@@ -194,7 +194,7 @@ export const Header: React.FC = () => {
                                      </p>
                   </div>
                   {/* profile image */}
-                  <div className="w-[40%] h-full ">
+                  <div className="w-[40%] h-full lg:mt-[20px] xl:mt-0">
                     <Image
           src="/image/mayowa.jpg"
           alt=""
