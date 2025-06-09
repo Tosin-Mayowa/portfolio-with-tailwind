@@ -7,7 +7,7 @@ import { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "@/app/_lib/Context";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import Tosin from "../../../public/Images/mayowa.jpg"
+import Tosin from "../../../public/Images/mayowa.jpg";
 import { projects } from "@/app/projects/page";
 const navLinks = [
   { id: 1, name: "Home", href: "/" },
@@ -22,26 +22,25 @@ export const Header: React.FC = () => {
   const mode = useContext(ThemeContext);
   const pathname = usePathname();
   console.log(hoveredLink);
-  
-useEffect(()=>{
-  hoveredLink===null?setHoveredLink("home"):"";
-},[hoveredLink])
 
+  useEffect(() => {
+    hoveredLink === null ? setHoveredLink("home") : "";
+  }, [hoveredLink]);
 
   useEffect(() => {
     const handleScroll = () => {
       mode?.handleScroll(window.scrollY > 50); // adjust scroll value as needed
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
     <>
       <header
         className={`fixed top-0 left-0 z-100 w-screen transition-all duration-500 ease-in-out overflow-hidden ${
           isClick ? "h-screen border-none bg-[#f5f5f5]" : "h-[80px]"
-        } ${mode?.scrolled?"bg-[#f5f5f5]":"bg-white"}` }
+        } ${mode?.scrolled ? "bg-[#f5f5f5]" : "bg-white"}`}
       >
         <div className="p-4 text-white font-bold flex justify-between">
           <h1
@@ -99,14 +98,13 @@ useEffect(()=>{
                     className="cursor-pointer"
                   >
                     <Link
-
                       href={navLink.href}
                       className={`transition-all duration-500 ease-in-out ${
                         mode?.light ? "text-[#1f1e1e]" : "text-white"
                       } ${
                         isActive ? "text-primary" : "text-[#666362]"
                       } text-[16px] font-bold lg:text-[25px] xl:text-[60px] hover:text-primary`}
-                    onClick={() => setIsClick(!isClick)}
+                      onClick={() => setIsClick(!isClick)}
                     >
                       {navLink.name}
                     </Link>
@@ -119,7 +117,7 @@ useEffect(()=>{
           {/* Hover Panel */}
           {isClick && hoveredLink && (
             <div className="hidden lg:flex  lg:absolute lg:left-0 lg:top-full lg:w-full lg:z-40">
-              {(hoveredLink===null || hoveredLink === "home") && (
+              {(hoveredLink === null || hoveredLink === "home") && (
                 <div className="flex p-4 justify-between items-center xl:w-full xl:h-[800px] border border-solid border-[#666362] xl:bg-[#f5f5f5]">
                   <div className="w-[50%] h-full lg:pt-[50px] xl:pt-[80px] ">
                     <h1 className="text-[40px] text-[#1F1E1E] ">
@@ -208,38 +206,50 @@ useEffect(()=>{
                       enterprise-grade banking solutions, I thrive at the
                       intersection of clean design, performance optimization,
                       and business impact.
-                                     </p>
+                    </p>
                   </div>
                   {/* profile image */}
                   <div className="w-[40%] h-full lg:mt-[20px] xl:mt-0">
                     <Image
-          src="/image/mayowa.jpg"
-          alt=""
-          width={600}
-          height={600}
-          
-        className="w-full h-[60%] lg:object-contain"
-        />
+                      src="/image/mayowa.jpg"
+                      alt=""
+                      width={600}
+                      height={600}
+                      className="w-full h-[60%] lg:object-contain"
+                    />
                   </div>
                 </div>
               )}
               {hoveredLink === "projects" && (
                 <div className="xl:w-full xl:h-[800px] border flex flex-col mt-[80px] lg:flex-row lg:flex-wrap lg:p-4  border-solid border-[#666362] xl:bg-[#f5f5f5]">
-                  
-                          {
-                              projects?.map(project=><div key={project.id} className="group flex flex-col lg:ml-4 justify-center items-center 
+                  {projects?.map((project) => (
+                    <div
+                      key={project.id}
+                      className="group flex flex-col lg:ml-4 justify-center items-center 
                               w-[200px] h-[300px] border border-solid border-black  bg-cover bg-center "
-                              style={{
-                          backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${project.imgUrl})`,
+                      style={{
+                        backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${project.imgUrl})`,
+                      }}
+                    >
+                      <h2 className="text-white text-center text-[18px]">
+                        {project.title}
+                      </h2>
+                      <p className="text-white text-[12px] mt-4 text-center font-light w-[70%] flex justify-center flex-wrap">
+                        {project.stack}
+                      </p>
+                      <Link
+                        href={`/projects/${project.id}`}
+                        onClick={(e) => {
+                          // e.preventDefault();
+                          setIsClick(prev=>!prev);
+                          
                         }}
-                              >
-                                  <h2 className="text-white text-center text-[18px]">{project.title}</h2>
-                                  <p className="text-white text-[12px] mt-4 text-center font-light w-[70%] flex justify-center flex-wrap">{project.stack}</p>
-                                  <Link href={`/projects/${project.id}`} onClick={() => setIsClick(!isClick)} className="transition-all duration-500 ease-in-out w-[60%] text-center opacity-0 group-hover:opacity-100 h-[30px] flex justify-center items-center mt-3  rounded-[8px] self-center bg-primary cursor-pointer ">View Details</Link>
-                              </div>)
-                          }
-                        
-                  
+                        className="transition-all duration-500 ease-in-out w-[60%] text-center opacity-0 group-hover:opacity-100 h-[30px] flex justify-center items-center mt-3  rounded-[8px] self-center bg-primary cursor-pointer "
+                      >
+                        View Details
+                      </Link>
+                    </div>
+                  ))}
                 </div>
               )}
               {hoveredLink === "contact" && (

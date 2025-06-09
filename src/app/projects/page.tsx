@@ -23,9 +23,9 @@ export const projects = [
   {
     id: 3,
     title: "PortFolio",
-    imgUrl: "",
+    imgUrl: "/image/myportfolio-new.png",
     description:
-      "This is my portfolio, I thought of the design in my head, just at some simple layout from dribble.",
+      "I'm a front-end developer specializing in building performant and visually engaging web applications using Next.js, TypeScript, and Tailwind CSS. My projects leverage advanced features of Next.js such as intercepting routes and dynamic routing, enabling seamless user experiences with modal navigation and panel-based layouts. I take a component-driven approach to UI, implementing responsive design and interactive interfaces using advanced Tailwind techniques, including modals, side panels, and transitions. My work combines clean code architecture with smooth UX, optimized performance, and scalability in mind.",
     link: "",
     stack: "Next.js,React.js,Typescript,Tailwind CSS,Git",
   },
@@ -60,22 +60,32 @@ export const projects = [
 export default function Projects() {
   return (
     <>
-      <section 
-      className="w-screen p-2 h-screen flex flex-col items-center lg:items-start mt-[80px] lg:flex-row lg:flex-wrap lg:p-4 ">
-        {
-            projects?.map(project=><div key={project.id} className="group flex flex-col lg:ml-4 justify-center items-center 
+      <section className="w-screen p-2 h-screen flex flex-col items-center lg:items-start mt-[80px] lg:flex-row lg:flex-wrap lg:p-4 ">
+        {projects?.map((project) => (
+          <div
+            key={project.id}
+            className="group flex flex-col lg:ml-4 justify-center items-center 
          h-[400px] w-[300px] md:w-[80%]  lg:w-[300px] lg:h-[400px] border border-solid border-black mt-4 bg-cover bg-center p-1"
             style={{
-        backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${project.imgUrl})`,
-      }}
-            >
-                <h2 className="text-white text-center text-[20px]">{project.title}</h2>
-                <p className="text-white text-[13px] md:text-[16px] mt-4 text-center font-light w-[80%]">{project.stack}</p>
-                <Link href={`/projects/${project.id}`} className="transition-all duration-500 ease-in-out w-[60%] 
+              backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${project.imgUrl})`,
+            }}
+          >
+            <h2 className="text-white text-center text-[20px]">
+              {project.title}
+            </h2>
+            <p className="text-white text-[13px] md:text-[16px] mt-4 text-center font-light w-[80%]">
+              {project.stack}
+            </p>
+            <Link
+              href={`/projects/${project.id}`}
+              className="transition-all duration-500 ease-in-out w-[60%] 
                 text-center opacity-100 xl:opacity-0 group-hover:opacity-100 
-                h-[20px] md:h-[40px] flex justify-center items-center mt-3 text-[13px] rounded-[4px] md:rounded-[8px] self-center bg-primary ">View Details</Link>
-            </div>)
-        }
+                h-[20px] md:h-[40px] flex justify-center items-center mt-3 text-[13px] rounded-[4px] md:rounded-[8px] self-center bg-primary "
+            >
+              View Details
+            </Link>
+          </div>
+        ))}
       </section>
     </>
   );
