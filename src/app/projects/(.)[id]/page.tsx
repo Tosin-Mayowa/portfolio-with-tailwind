@@ -11,7 +11,7 @@ export default function InterceptProject({ params }: IParams): JSX.Element {
 
   return (
     <>
-      <ProjectIntercept params={params.id}/>
+      <ProjectIntercept param={params.id}/>
     </>
   );
 }

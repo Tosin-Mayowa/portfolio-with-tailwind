@@ -7,13 +7,13 @@ import { projects } from '../../app/projects/page';
 import { IoIosCloseCircleOutline } from 'react-icons/io';
 import Link from 'next/link';
 
-interface IParams {
-  params: string;
+interface IProps {
+  param: string;
 }
 
-export function ProjectIntercept({ params }: IParams): JSX.Element {
+export function ProjectIntercept({ param }: IProps): JSX.Element {
   const router = useRouter();
-  const project = projects.find(project => project.id === Number(params));
+  const project = projects.find(project => project.id === Number(param));
 
   const closeModal = () => {
     router.back();
@@ -25,7 +25,7 @@ export function ProjectIntercept({ params }: IParams): JSX.Element {
         {/* Close Button */}
         <button
           onClick={closeModal}
-          className="absolute top-3 right-4 text-2xl text-gray-600 hover:text-black"
+          className="absolute top-3 right-4 text-2xl text-gray-600 hover:text-black cursor-pointer"
           aria-label="Close"
         >
           <IoIosCloseCircleOutline />
