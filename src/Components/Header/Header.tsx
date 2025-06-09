@@ -21,11 +21,14 @@ export const Header: React.FC = () => {
   const [hoveredLink, setHoveredLink] = useState<string | null>("home");
   const mode = useContext(ThemeContext);
   const pathname = usePathname();
-  console.log(hoveredLink);
+  
+  
+useEffect(() => {
+  if (hoveredLink === null) {
+    setHoveredLink("home");
+  }
+}, [hoveredLink]);
 
-  useEffect(() => {
-    hoveredLink === null ? setHoveredLink("home") : null;
-  }, [hoveredLink]);
 
   useEffect(() => {
     const handleScroll = () => {
