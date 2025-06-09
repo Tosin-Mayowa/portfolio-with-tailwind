@@ -3,10 +3,11 @@ import { projects } from "../page";
 import Link from "next/link";
 
 type IParams={
-    params:{id:string};
+    params:Promise<{id:string}>;
 }
-export default function ProjectDetail({params}:IParams){
-     const project=projects.find(project=>project.id===Number(params.id))
+export default async function ProjectDetail({params}:IParams){
+  const {id} =await params
+     const project=projects.find(project=>project.id===Number(id))
 
     return(
 <>
