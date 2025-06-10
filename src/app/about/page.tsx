@@ -4,7 +4,7 @@ export default function About() {
   return (
     <>
       <section className="w-screen min-h-screen  mt-[100px] flex  justify-center  md:mt-[120px]">
-        <div className="p-3 xl:w-[80%] h-full flex flex-col-reverse justify-center items-center   lg:bg-[#f5f5f5]">
+        <div className="p-3 xl:w-[80%] h-full flex flex-col-reverse justify-center items-center bg-[#f5f5f5]">
           <div className="w-[80%] h-full pt-3  xl:pt-[50px] ">
             <h3 className="text-primary text-sm text-center xl:text-left">
               Hi, I am Tosin Mayowa

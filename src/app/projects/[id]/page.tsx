@@ -13,7 +13,7 @@ export default async function ProjectDetail({params}:IParams){
     return(
 <>
 
-<div className="mt-[80px] flex items-center justify-center bg-white bg-opacity-50">
+<div className="mt-[80px] flex items-center justify-center bg-white ">
       <div className="w-[80vw] h-[80vh] bg-[#f5f5f5] rounded-lg shadow-xl relative p-6">
        
         {project?.imgUrl && (
