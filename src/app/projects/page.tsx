@@ -7,7 +7,7 @@ import { projects } from "../_lib/utils";
 export default function Projects() {
   return (
     <>
-      <section className="w-screen h-[1024px] flex flex-col items-center lg:items-start mt-[80px] lg:flex-row lg:flex-wrap lg:p-4 ">
+      <section className="w-screen h-[1024px] bg-[#f5f5f5] flex flex-col items-center lg:items-start mt-[80px] lg:flex-row lg:flex-wrap lg:p-4 ">
         {projects?.map((project) => (
           <div
             key={project.id}
