@@ -14,7 +14,7 @@ export default function About() {
             </h1>
             <h4 className="text-[#1F1E1E] text-sm md:text-[16px] lg:text-[18px] text-center xl:text-left font-extrabold">
               Tech Stack: React.js, Next.js, Typescript,Javascript,React Testing
-              Library,Node.js,Supabase
+              Library,Node.js,Supabase,Wordpress
             </h4>
             <p className="text-[#1f1e1e] text-center xl:text-left text-[13px] md:text-[16px] lg:text-[18px] font-light mt-[10px]">
               I am a versatile Full-Stack Engineer with a strong foundation in
