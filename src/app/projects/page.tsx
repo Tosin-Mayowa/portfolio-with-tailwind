@@ -7,14 +7,14 @@ import { projects } from "../_lib/utils";
 export default function Projects() {
   return (
     <>
-      <section className="w-screen p-2 h-screen flex flex-col items-center lg:items-start mt-[80px] lg:flex-row lg:flex-wrap lg:p-4 ">
+      <section className="w-screen h-[1024px] flex flex-col items-center lg:items-start mt-[80px] lg:flex-row lg:flex-wrap lg:p-4 ">
         {projects?.map((project) => (
           <div
             key={project.id}
-            className="group flex flex-col lg:ml-4 justify-center items-center 
-         h-[400px] w-[300px] md:w-[80%]  lg:w-[300px] lg:h-[400px] border border-solid border-black mt-4 bg-cover bg-center p-1"
+            className="group  flex flex-col lg:ml-4 justify-center items-center 
+          h-[400px] w-[300px] md:w-[80%]  lg:w-[300px] lg:h-[400px] border border-solid border-black mt-8 bg-cover bg-center p-1"
             style={{
-              backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${project.imgUrl})`,
+              backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${project.imgUrl})`,
             }}
           >
             <h2 className="text-white text-center text-[20px]">
