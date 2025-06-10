@@ -3,9 +3,10 @@
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { JSX } from 'react';
-import { projects } from '../../app/projects/page';
+
 import { IoIosCloseCircleOutline } from 'react-icons/io';
 import Link from 'next/link';
+import { projects } from '@/app/_lib/utils';
 
 interface IProps {
   param: string;

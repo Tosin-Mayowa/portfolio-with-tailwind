@@ -7,8 +7,8 @@ import { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "@/app/_lib/Context";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { projects } from "@/app/_lib/utils";
 
-import { projects } from "@/app/projects/page";
 const navLinks = [
   { id: 1, name: "Home", href: "/" },
   { id: 2, name: "About", href: "/about" },

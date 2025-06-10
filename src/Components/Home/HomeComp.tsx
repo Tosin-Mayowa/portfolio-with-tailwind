@@ -7,32 +7,32 @@ export const HomeComp = () => {
   const router=useRouter();
   return (
     <>
-      <section className="w-screen h-screen">
+      <section className="w-screen h-screen bg-[#f5f5f5]">
         {/* left */}
         <div
           className={`w-full h-full flex items-center justify-center lg:h-[50%] xl:h-full lg:mt-[100px] xl:mt-0 ${
             mode?.light ? "bg-backgroundLight" : "bg-backgroundDark"
           } flex flex-col justify-center items-center`}
         >
-          <div className="w-full h-[60%] p-2 border border-solid border-white md:w-[90%]  flex flex-col small:h-[50%] xmd:w-[80%]  xmd:h-[50%] lg:w-[80%] lg:h-full lg:justify-center">
+          <div className="w-full h-[60%] p-2 border border-solid border-white md:w-[90%]  flex flex-col small:h-[50%] xmd:w-[80%]  xmd:h-[50%] lg:w-[70%] lg:h-full lg:justify-center">
             <h1
-              className={`text-center text-[30px] small:text-[35px] md:text-[55px] lg:text-[60px] ${
-                mode?.light ? "text-[#1f1e1e]" : "text-white"
+              className={`text-center text-[30px] small:text-[35px] md:text-[55px] lg:text-[65px] font-bold ${
+                mode?.light ? "text-[#666362]" : "text-white"
               }`}
             >
               {" "}
-              Clean Code, Smart
+              Clean Code, Smart  Features
               <span
                 className={`${mode?.light ? "text-primary" : "text-secondary"}`}
               >
                 {" "}
-                Features, Full-Stack Solutions
+               Full-Stack Solutions
               </span>{" "}
               <br />
             </h1>
             <p
               className={`${
-                mode?.light ? "text-[#1F1E1E]" : "text-white"
+                mode?.light ? "text-[#666362]" : "text-white"
               } text-center font-light text-[14px] mt-[10px] small:text-[15px] md:mt-[15px] md:text-[18px] lg:w-[80%] lg:self-center`}
             >
               I am a versatile Full-Stack Engineer with a strong foundation in
