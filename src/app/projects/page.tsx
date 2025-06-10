@@ -25,8 +25,8 @@ export default function Projects() {
             </p>
             <Link
               href={`/projects/${project.id}`}
-              className="transition-all duration-500  ease-in-out w-[60%] 
-                text-center text-white opacity-100 xl:opacity-0 group-hover:opacity-100 
+              className="text-white transition-all duration-500  ease-in-out w-[60%] 
+                text-center opacity-100 xl:opacity-0 group-hover:opacity-100 
                 h-[20px] md:h-[40px] flex justify-center items-center mt-3 text-[13px] rounded-[4px] md:rounded-[8px] self-center bg-primary "
             >
               View Details
