@@ -1,5 +1,6 @@
+import { projects } from "@/app/_lib/utils";
 import Image from "next/image";
-import { projects } from "../page";
+
 import Link from "next/link";
 
 type IParams={
