@@ -23,7 +23,7 @@ export const projects = [
     imgUrl: "/image/myportfolio-new.png",
     description:
       "I'm a front-end developer specializing in building performant and visually engaging web applications using Next.js, TypeScript, and Tailwind CSS. My projects leverage advanced features of Next.js such as intercepting routes and dynamic routing, enabling seamless user experiences with modal navigation and panel-based layouts. I take a component-driven approach to UI, implementing responsive design and interactive interfaces using advanced Tailwind techniques, including modals, side panels, and transitions. My work combines clean code architecture with smooth UX, optimized performance, and scalability in mind.",
-    link: "",
+    link: "https://portfolio-with-tailwind-jnhi.vercel.app/projects",
     stack: "Next.js,React.js,Typescript,Tailwind CSS,Git",
   },
   {

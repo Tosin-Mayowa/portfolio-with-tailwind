@@ -247,7 +247,7 @@ useEffect(() => {
                           setIsClick(prev=>!prev);
                           
                         }}
-                        className="transition-all duration-500 ease-in-out w-[60%] text-center opacity-0 group-hover:opacity-100 h-[30px] flex justify-center items-center mt-3  rounded-[8px] self-center bg-primary cursor-pointer "
+                        className="transition-all duration-500 ease-in-out w-[60%] text-white text-center opacity-0 group-hover:opacity-100 h-[30px] flex justify-center items-center mt-3  rounded-[8px] self-center bg-primary cursor-pointer "
                       >
                         View Details
                       </Link>
