@@ -21,8 +21,8 @@ export function ProjectIntercept({ param }: IProps): JSX.Element {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center pt-[80px] lg:pt-0  justify-center  bg-black  bg-opacity-50 px-4">
-      <div className="bg-white rounded-lg shadow-xl relative w-full max-w-4xl max-h-[100vh] md:max-h-[70vh] lg:max-h-[100vh] overflow-y-auto p-2 md:p-6">
+    <div className="fixed inset-0 z-50  flex items-center pt-[50px] lg:pt-0  justify-center  bg-black  bg-opacity-50 px-4 ">
+      <div className="bg-white rounded-lg shadow-xl relative w-full max-w-4xl max-h-[100vh] md:max-h-[70vh] lg:max-h-[100vh]  p-2 md:p-6">
         {/* Close Button */}
         <button
           onClick={closeModal}
@@ -48,7 +48,7 @@ export function ProjectIntercept({ param }: IProps): JSX.Element {
 
           <div className="flex flex-col justify-center">
             <h2 className="text-2xl font-semibold mb-2 text-[#1f1e1e]">{project?.title}</h2>
-            <p className="text-gray-700 mb-4">{project?.description}</p>
+            <p className="text-gray-700 mb-4 text-[14px]">{project?.description}</p>
             {project?.link && (
               <Link
                 href={project.link}
