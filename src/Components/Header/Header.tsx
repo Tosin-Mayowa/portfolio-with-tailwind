@@ -46,7 +46,7 @@ useEffect(() => {
           isClick ? "h-screen border-none bg-[#f5f5f5]" : "h-[80px]"
         } ${mode?.scrolled ? "bg-[#f5f5f5]" : "bg-white"}`}
       >
-        <div className="p-8 text-white font-bold flex justify-between">
+        <div className="p-8 text-white font-bold z-100 flex justify-between">
           <h1
             className={`text-[30px] flex ${
               mode?.light ? "text-primary" : "text-secondary"
@@ -56,7 +56,7 @@ useEffect(() => {
           </h1>
 
           <div
-            className="relative h-[50px] flex cursor-pointer"
+            className="relative h-[50px] flex cursor-pointer mt-2 lg:mt-[2px]"
             onClick={() => setIsClick(!isClick)}
           >
             {!isClick ? (
@@ -67,7 +67,7 @@ useEffect(() => {
               />
             ) : (
               <IoIosCloseCircleOutline
-                className={`text-[30px] absolute top-0 ${
+                className={`text-[30px] absolute top-0 mt-2 lg:mt-[2px] ${
                   mode?.light ? "text-[#1F1E1E]" : "text-white"
                 } right-1.5 self-center`}
               />
