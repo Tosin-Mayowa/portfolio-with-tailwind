@@ -21,7 +21,7 @@ export function ProjectIntercept({ param }: IProps): JSX.Element {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 px-4">
+    <div className="fixed inset-0 z-50 flex items-center justify-center mt-[80px] bg-black bg-opacity-50 px-4">
       <div className="bg-white rounded-lg shadow-xl relative w-full max-w-4xl max-h-[100vh] md:max-h-[70vh] lg:max-h-[100vh] overflow-y-auto p-2 md:p-6">
         {/* Close Button */}
         <button

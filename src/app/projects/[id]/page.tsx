@@ -13,8 +13,8 @@ export default async function ProjectDetail({params}:IParams){
     return(
 <>
 
-<div className="mt-[80px] flex items-center justify-center bg-white ">
-      <div className="w-[80vw] h-[80vh] bg-[#f5f5f5] rounded-lg shadow-xl relative p-6">
+<div className="mt-[80px] flex items-center justify-center bg-white h-[1024px] lg:h-screen">
+      <div className="w-[80vw] h-[80%] bg-[#f5f5f5] rounded-lg shadow-xl relative p-6">
        
         {project?.imgUrl && (
   <Image
