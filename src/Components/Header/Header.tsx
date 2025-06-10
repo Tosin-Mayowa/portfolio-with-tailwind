@@ -45,7 +45,7 @@ useEffect(() => {
           isClick ? "h-screen border-none bg-[#f5f5f5]" : "h-[80px]"
         } ${mode?.scrolled ? "bg-[#f5f5f5]" : "bg-white"}`}
       >
-        <div className="p-4 text-white font-bold flex justify-between">
+        <div className="p-8 text-white font-bold flex justify-between">
           <h1
             className={`text-[30px] flex ${
               mode?.light ? "text-primary" : "text-secondary"
