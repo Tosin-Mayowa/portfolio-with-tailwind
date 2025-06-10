@@ -67,7 +67,7 @@ useEffect(() => {
               />
             ) : (
               <IoIosCloseCircleOutline
-                className={`text-[30px] absolute top-0 mt-2 lg:mt-[2px] ${
+                className={`text-[30px] absolute top-0  ${
                   mode?.light ? "text-[#1F1E1E]" : "text-white"
                 } right-1.5 self-center`}
               />
