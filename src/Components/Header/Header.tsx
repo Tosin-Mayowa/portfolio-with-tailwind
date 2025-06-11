@@ -23,12 +23,19 @@ export const Header: React.FC = () => {
   const mode = useContext(ThemeContext);
   const pathname = usePathname();
   
+  console.log({pathname,arp:pathname.split('/')});
   
 useEffect(() => {
-  if (hoveredLink === null) {
+  
+  let pathIndex=pathname.split('/')[1]
+  if (hoveredLink === null&&pathIndex!==""&& isClick) {
+    setHoveredLink(pathIndex);
+  }
+  if (hoveredLink === null&&pathIndex===""&&isClick) {
     setHoveredLink("home");
   }
-}, [hoveredLink]);
+  
+}, [hoveredLink,isClick]);
 
 
   useEffect(() => {
