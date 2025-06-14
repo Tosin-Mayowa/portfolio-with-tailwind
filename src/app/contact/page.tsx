@@ -28,7 +28,7 @@ export default function Contact() {
           </div>
           {/* socials */}
           <div className="w-[70%] h-auto flex mt-[15px] md:mt-[20px] lg:mt-0">
-            <h3 className="text-[20px] font-extrabold text-[#666362]git">
+            <h3 className="text-[20px] font-extrabold text-[#666362]">
               SOCIALS
             </h3>
             <div>
