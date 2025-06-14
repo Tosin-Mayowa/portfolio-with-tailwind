@@ -39,7 +39,7 @@ export const projects = [
     title: "Regix",
     imgUrl: "/image/regix-1.jpg",
     description:
-      "Regix is an educational management and administration system for enhancing school performance.It holds many crucial functions to ensure school management run smoothly. The teachers, staff and other external parties can collaborate easily through a centralized platform.It also bridges communication between the school, students and parents. Some of the essential features on Regix are: Attendance record,Effortless fee payment,effective communication,parent access,students and school vehicle tracker,Inventory management, and many more",
+      "Regix is an educational management and administration system for enhancing school performance.It holds many crucial functions to ensure school management run smoothly. The teachers, staff and other external parties can collaborate easily through a centralized platform.",
     link: "https://regix-rzay.vercel.app/",
     stack: "React.js,Typescript,Chakra-ui,Nest.js",
   },

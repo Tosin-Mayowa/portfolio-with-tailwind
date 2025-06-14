@@ -63,7 +63,7 @@ useEffect(() => {
           </h1>
 
           <div
-            className="relative h-[50px] flex cursor-pointer mt-2 lg:mt-[2px]"
+            className="relative h-[50px] flex cursor-pointer mt-2 lg:mt-[2px] self-center"
             onClick={() => setIsClick(!isClick)}
           >
             {!isClick ? (
@@ -94,7 +94,7 @@ useEffect(() => {
               isClick ? "h-auto opacity-100" : "h-0 opacity-0"
             }`}
           >
-            <ul className="flex flex-col gap-4 p-4 text-white xl:flex-row">
+            <ul className="flex flex-col gap-4 p-10 text-white xl:flex-row md:p-4">
               {navLinks.map((navLink) => {
                 const isActive =
                   pathname === navLink.href ||
