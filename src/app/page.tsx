@@ -3,6 +3,9 @@ import { HomeComp } from "@/Components/Home/HomeComp";
 
 export default function Home() {
   return (
-   <HomeComp/>
+    <main className="lg:h-[1024px]">
+         <HomeComp/>
+    </main>
+   
   );
 }
