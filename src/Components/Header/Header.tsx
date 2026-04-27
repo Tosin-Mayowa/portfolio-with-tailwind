@@ -24,18 +24,17 @@ export const Header: React.FC = () => {
   const mode = useContext(ThemeContext);
   const pathname = usePathname();
 
-  /* Derive the panel to show: prefer the hovered item, fall back to the
-     current route so the panel is always populated when the menu is open. */
+  
   const activeSegment = pathname === "/" ? "home" : pathname.split("/")[1];
   const visiblePanel = hoveredLink ?? activeSegment;
 
-  /* FIX: Close menu on route change (e.g. after clicking a link). */
+  
   useEffect(() => {
     setIsOpen(false);
     setHoveredLink(null);
   }, [pathname]);
 
-  /* Scroll shadow */
+
   useEffect(() => {
     const handleScroll = () => {
       mode?.handleScroll(window.scrollY > 50);
@@ -44,7 +43,7 @@ export const Header: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [mode]);
 
-  /* Lock body scroll when menu is open */
+
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
@@ -62,7 +61,6 @@ export const Header: React.FC = () => {
         `}
       >
 
-        {/* ── Top bar ── */}
         <div className="px-8 h-[80px] flex items-center justify-between">
           <h1
             className={`text-[28px] font-bold ${
@@ -93,7 +91,7 @@ export const Header: React.FC = () => {
           </button>
         </div>
 
-        {/* ── Menu body (only rendered when open) ── */}
+    
         <div
           className={`transition-all duration-500 ease-in-out overflow-hidden ${
             isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
@@ -105,7 +103,7 @@ export const Header: React.FC = () => {
             onMouseLeave={() => setHoveredLink(null)}
           >
 
-            {/* Nav links */}
+         
             <nav className="flex-shrink-0 lg:w-[35%] xl:w-[30%] p-8 flex items-start lg:items-center">
               <ul className="flex flex-col gap-3 w-full">
                 {navLinks.map((navLink) => {
@@ -136,15 +134,10 @@ export const Header: React.FC = () => {
               </ul>
             </nav>
 
-            {/* ── Hover / Active Panel ──
-                Visible on lg+ only. On mobile the user navigates directly.
-                FIX: panel is inside the same onMouseLeave wrapper as nav,
-                so hovering inside the panel keeps it visible.
-            */}
+      
             <div className="hidden lg:block flex-1 border-l border-[#66636240] overflow-y-auto">
               <div className="w-full h-full">
 
-                {/* HOME panel */}
                 {visiblePanel === "home" && (
                   <div className="flex p-8 xl:p-12 gap-8 items-center h-full">
                     <div className="w-[55%]">
@@ -164,7 +157,7 @@ export const Header: React.FC = () => {
                       </p>
                     </div>
                     <div className="w-[45%] flex justify-center items-center">
-                      {/* Animated circles */}
+                     
                       <div className="relative w-[220px] h-[220px] xl:w-[280px] xl:h-[280px]">
                         {[0.15, 0.20, 0.28, 0.38, 0.50, 0.65].map((opacity, i) => (
                           <div
@@ -182,7 +175,7 @@ export const Header: React.FC = () => {
                   </div>
                 )}
 
-                {/* ABOUT panel */}
+                
                 {visiblePanel === "about" && (
                   <div className="flex p-8 xl:p-12 gap-8 items-start h-full">
                     <div className="w-[55%] pt-4">
@@ -220,7 +213,7 @@ export const Header: React.FC = () => {
                   </div>
                 )}
 
-                {/* PROJECTS panel */}
+               
                 {visiblePanel === "projects" && (
                   <div className="p-8 xl:p-12 h-full overflow-y-auto">
                     <div className="flex flex-wrap gap-4">
@@ -255,7 +248,7 @@ export const Header: React.FC = () => {
                   </div>
                 )}
 
-                {/* CONTACT panel */}
+               
                 {visiblePanel === "contact" && (
                   <div className="p-8 xl:p-12 h-full flex flex-col justify-center">
                     <h1 className="text-[48px] xl:text-[60px] font-extrabold text-[#666362]">
@@ -277,7 +270,7 @@ export const Header: React.FC = () => {
                         </div>
                       </div>
 
-                      {/* Socials */}
+                    
                       <div className="flex items-start gap-4">
                         <h3 className="text-[16px] font-extrabold text-[#666362] whitespace-nowrap">
                           SOCIALS
@@ -307,7 +300,7 @@ export const Header: React.FC = () => {
 
               </div>
             </div>
-            {/* end panel */}
+           
 
           </div>
         </div>

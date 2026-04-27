@@ -13,14 +13,10 @@ export const HomeComp = () => {
         mode?.light ? "bg-backgroundLight" : "bg-backgroundDark"
       }`}
     >
-      {/* 
-        FIX: Two-column layout on large screens.
-        Previously the right column had lg:hidden xl:hidden which made it ALWAYS hidden.
-        Now it's a proper responsive flex row: stacked on mobile, side-by-side on lg+.
-      */}
+     
       <div className="w-full min-h-screen flex flex-col lg:flex-row items-center justify-center px-4 py-20 lg:py-[60px] lg:px-2 xl:px-20 gap-8">
 
-        {/* ── Left: Text Content ── */}
+      
         <div className="w-full lg:w-1/2 flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
           <h1
             className={`text-[28px] small:text-[34px] md:text-[48px] lg:text-[56px] xl:text-[64px] font-bold leading-tight ${
@@ -58,13 +54,10 @@ export const HomeComp = () => {
           </button>
         </div>
 
-        {/* ── Right: Animated Circles ──
-            FIX: Removed the contradictory lg:hidden xl:hidden classes.
-            Now hidden on mobile/tablet (flex would crowd small screens), visible from lg up.
-        */}
+       
         <div className="hidden lg:flex w-full lg:w-1/2 items-center justify-center">
           <div className="relative w-[320px] h-[320px] xl:w-[420px] xl:h-[420px]">
-            {/* Outermost ring */}
+           
             <div className="absolute inset-0 rounded-full bg-[rgba(0,184,177,0.15)] animate-pulse" />
             <div
               className="absolute rounded-full bg-[rgba(0,184,177,0.20)]"
@@ -82,7 +75,7 @@ export const HomeComp = () => {
               className="absolute rounded-full bg-[rgba(0,184,177,0.50)]"
               style={{ inset: "40%" }}
             />
-            {/* Core */}
+           
             <div
               className="absolute rounded-full bg-[rgba(0,184,177,0.70)]"
               style={{ inset: "50%" }}
