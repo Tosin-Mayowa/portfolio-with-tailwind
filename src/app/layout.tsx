@@ -26,7 +26,7 @@ export default function RootLayout({
         className={playfair.className}
       >
         <ThemeProvider>
-          <main className="lg:h-[1024px]">
+          <main className="lg:h-screen xl:h-[1024px]">
          <Header/>
         {children}
         </main>
