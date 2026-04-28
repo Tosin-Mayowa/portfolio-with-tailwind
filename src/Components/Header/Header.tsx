@@ -183,10 +183,10 @@ export const Header: React.FC = () => {
                         Hi, I am Tosin Mayowa
                       </h3>
                       <h1 className="text-[28px] xl:text-[36px] font-bold text-[#1F1E1E] mt-2 leading-tight">
-                        Full-stack Engineer with 3 Years Experience
+                        Full-stack Engineer with 5 Years Experience
                       </h1>
                       <h4 className="text-[#1F1E1E] font-extrabold text-[13px] mt-3">
-                        React.js · Next.js · TypeScript · Node.js · Supabase
+                        React.js · Next.js · TypeScript · Nest.js · C# . ASP.NET · Docker · Kubernetes · Supabase · WordPress
                       </h4>
                       <p className="text-[#666362] text-[14px] xl:text-[15px] font-light mt-3 leading-relaxed">
                         I am a versatile Full-Stack Engineer with a strong
@@ -196,8 +196,8 @@ export const Header: React.FC = () => {
                         leading high-impact projects across fintech, edtech,
                         logistics, and enterprise environments. From
                         transforming Figma designs into pixel-perfect,
-                        responsive UIs using React.js, Next.js, TypeScript,
-                        and Tailwind CSS, to diving deep into C# and ASP.NET
+                        responsive UIs using React.js, Next.js, TypeScript,Nest.js
+                        and Tailwind CSS, to diving deep into C# and ASP.NET,Docker,Kubernetes
                         to deliver enterprise-grade banking solutions.
                       </p>
                     </div>
