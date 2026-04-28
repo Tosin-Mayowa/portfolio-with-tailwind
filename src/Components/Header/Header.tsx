@@ -149,7 +149,7 @@ export const Header: React.FC = () => {
                       </h1>
                       <p className="text-[#666362] text-[15px] font-light mt-4 leading-relaxed">
                         I am a versatile Full-Stack Engineer with a strong
-                        foundation in frontend development, a passion for
+                        foundation in Web development using microservice architectures, a passion for
                         building scalable digital solutions, and a proven track
                         record of quickly adapting to new technologies and
                         leading high-impact projects across fintech, edtech,

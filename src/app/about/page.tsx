@@ -10,7 +10,7 @@ export default function About() {
               Hi, I am Tosin Mayowa
             </h3>
             <h1 className="text-[22px] mt-1  md:text-[40px] text-[#1F1E1E] text-center xl:text-left">
-              I am a Full-stack Engineer with 3years Experience
+              I am a Full-stack Engineer with 5years Experience
             </h1>
             <h4 className="text-[#1F1E1E] text-sm md:text-[16px] lg:text-[18px] text-center xl:text-left font-extrabold">
               Tech Stack: React.js, Next.js, Typescript,Javascript,React Testing
@@ -18,14 +18,14 @@ export default function About() {
             </h4>
             <p className="text-[#1f1e1e] text-center xl:text-left text-[13px] md:text-[16px] lg:text-[18px] font-light mt-[10px]">
               I am a versatile Full-Stack Engineer with a strong foundation in
-              frontend development, a passion for building scalable digital
+              Web development, a passion for building scalable digital
               solutions, and a proven track record of quickly adapting to new
               technologies and leading high-impact projects across fintech,
               edtech, logistics, and enterprise environments.
               <span className="block mt-3">
                 From transforming Figma designs into pixel-perfect, responsive
                 user interfaces using React.js, Next.js, TypeScript, and
-                Tailwind CSS, to diving deep into C# and ASP.NET to deliver
+                Tailwind CSS, to diving deep into C# and ASP.NET,NestJs,Docker,Kubernetes to deliver
                 enterprise-grade banking solutions, I thrive at the intersection
                 of clean design, performance optimization, and business impact.
               </span>
