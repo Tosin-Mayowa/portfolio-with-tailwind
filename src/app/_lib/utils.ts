@@ -5,8 +5,8 @@ export const projects = [
     imgUrl: "/image/portfolio-pixx.png",
     description:
       "ILearner is a modern, intuitive Learning Management System (LMS) built to transform the way individuals, educators, and institutions deliver and experience online learning. Designed for accessibility and ease-of-use, ILearner enables seamless course creation, student management, assessments, and real-time progress tracking all in one centralized platform. Whether you are a tutor, training organization, or school administrator, ILearner gives you the tools to educate, engage, and evaluate learners from anywhere in the world",
-    link: "https://lms-app-njr7.vercel.app/",
-    stack: "Next.js,Tailwind css, React Testing Library, Typescript,Git",
+    link: "https://github.com/Tosin-Mayowa/ilearner-api-gateway",
+    stack: "Next.js,Tailwind css, React Testing Library, Typescript,Git,Nest.js,MsSQL,Microservices",
   },
   {
     id: 2,
